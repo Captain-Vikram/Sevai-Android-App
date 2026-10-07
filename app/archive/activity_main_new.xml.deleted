@@ -1,0 +1,95 @@
+<!-- ARCHIVE: activity_main_new.xml (moved from res/layout) -->
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <!-- Status Label -->
+    <TextView
+        android:id="@+id/statusLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="SMS Exporter - Ready\nTap 'Read Today's SMS' to start"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:padding="12dp"
+        android:background="@android:color/darker_gray"
+        android:textColor="@android:color/white"
+        android:gravity="center"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Scrollable SMS Display Area -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@android:color/white"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/smsDisplay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="No SMS loaded yet"
+            android:textSize="12sp"
+            android:textColor="@android:color/black"
+            android:lineSpacingExtra="4dp" />
+    </ScrollView>
+
+    <!-- Buttons Container -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="16dp">
+
+        <!-- Read SMS Button -->
+        <Button
+            android:id="@+id/btnRead"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="Read Today's SMS"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Export JSON Button -->
+        <Button
+            android:id="@+id/btnExportJson"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Export as JSON"
+            android:textSize="14sp"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Export CSV Button -->
+        <Button
+            android:id="@+id/btnExportCsv"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Export as CSV"
+            android:textSize="14sp"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Export TXT Button -->
+        <Button
+            android:id="@+id/btnExportTxt"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Export as TXT"
+            android:textSize="14sp"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Share Button -->
+        <Button
+            android:id="@+id/btnShare"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Share Exported Files"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+</LinearLayout>

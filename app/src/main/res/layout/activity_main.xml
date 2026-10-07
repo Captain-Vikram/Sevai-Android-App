@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="#0C0C0C"
+    tools:context=".MainActivity">
+
+    <!-- Logo -->
+    <ImageView
+        android:id="@+id/logoImage"
+        android:layout_width="289dp"
+        android:layout_height="289dp"
+        android:layout_marginBottom="24dp"
+        android:contentDescription="@string/app_logo"
+        android:src="@drawable/sevai_app_bg" />
+
+    <!-- App Name -->
+    <TextView
+        android:id="@+id/appName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SevAI.app"
+        android:textColor="#FFFFFF"
+        android:textSize="22sp"
+        android:fontFamily="@font/archivo_black"
+        android:layout_marginBottom="36dp" />
+
+    <!-- Zero Trust Mode Button -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/zeroTrustButton"
+        android:layout_width="260dp"
+        android:layout_height="60dp"
+        android:text="Zero Trust Mode"
+        android:textColor="#000000"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        android:fontFamily="@font/archivo_black"
+        android:layout_marginBottom="18dp"
+        android:background="@drawable/btn_round_light" />
+
+    <!-- Test SMS Button -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/testSMSButton"
+        android:layout_width="260dp"
+        android:layout_height="60dp"
+        android:text="Test SMS"
+        android:textColor="#FFFFFF"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        android:fontFamily="@font/archivo_black"
+        android:background="@drawable/btn_round_gold" />
+
+    <!-- 1-Month History Button -->
+
+    <!-- Hidden status label for compatibility -->
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/historyButton"
+        android:layout_width="260dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="18dp"
+        android:background="@drawable/btn_round_gold"
+        android:fontFamily="@font/archivo_black"
+        android:text="1-Month History"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/statusLabel"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone" />
+
+    <!-- Hidden SMS display for compatibility -->
+    <TextView
+        android:id="@+id/smsDisplay"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone" />
+
+    <!-- Hidden test console for compatibility -->
+    <TextView
+        android:id="@+id/testConsole"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone" />
+
+</LinearLayout>

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#0C0C0C"
+    tools:context=".DetailActivity">
+
+    <!-- Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="16dp">
+
+        <Button
+            android:id="@+id/btnBack"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:text="←"
+            android:textSize="24sp"
+            android:textColor="#FFFFFF"
+            android:background="@android:color/transparent" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="SMS Details"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:gravity="center" />
+
+        <View
+            android:layout_width="48dp"
+            android:layout_height="48dp" />
+    </LinearLayout>
+
+    <!-- Status Label -->
+    <TextView
+        android:id="@+id/statusLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ready"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:padding="12dp"
+        android:background="#1A1A1A"
+        android:textColor="#CEA746"
+        android:gravity="center"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Scrollable SMS Display Area -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="328dp"
+        android:layout_weight="1"
+        android:background="#1A1A1A"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/smsDisplay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lineSpacingExtra="4dp"
+            android:text="No SMS loaded yet"
+            android:textColor="#E2E2E0"
+            android:textSize="12sp" />
+    </ScrollView>
+
+    <!-- Buttons Container -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="16dp">
+
+        <!-- Read SMS Button -->
+        <Button
+            android:id="@+id/btnRead"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="Read Financial SMS (Last 1 month)"
+            android:textSize="16sp"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:background="@drawable/btn_round_light"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Export JSON Button -->
+        <Button
+            android:id="@+id/btnExportJson"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Export as JSON"
+            android:textSize="14sp"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:background="@drawable/btn_round_gold"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Share Button -->
+        <Button
+            android:id="@+id/btnShare"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Share Exported Files"
+            android:textSize="14sp"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:background="@drawable/btn_round_gold" />
+
+        <!-- Manual Test Section -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="8dp" />
+
+        <Button
+            android:id="@+id/btnTestSendLatest"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Test Send Latest Financial SMS"
+            android:textSize="14sp"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:background="@drawable/btn_round_light"
+            android:layout_marginBottom="6dp" />
+
+        <TextView
+            android:id="@+id/testConsole"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:background="#111111"
+            android:textColor="#DDDDDD"
+            android:textSize="11sp"
+            android:padding="8dp"
+            android:text="(Manual test console)"
+            android:overScrollMode="never"
+            android:scrollbars="vertical" />
+    </LinearLayout>
+
+</LinearLayout>
