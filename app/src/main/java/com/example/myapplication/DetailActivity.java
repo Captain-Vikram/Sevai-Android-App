@@ -36,7 +36,7 @@ public class DetailActivity extends AppCompatActivity {
     private final int PERMISSION_REQUEST_CODE = 1;
     private String ownerName = "";
     private android.content.SharedPreferences prefs;
-    private final String API_ENDPOINT = "https://debtless-creation-goal.ngrok-free.dev/api/sms/ingest";
+    private final String API_ENDPOINT = "https://debtless-creation-goal.ngrok-free.dev/webhook/api/sms/ingest";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

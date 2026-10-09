@@ -19,7 +19,7 @@ X-SMS-API-Key: <user-api-key>
 The webhook endpoint is configured in the SMS receiver and activities:
 
 ```text
-https://debtless-creation-goal.ngrok-free.dev/api/sms/ingest
+https://debtless-creation-goal.ngrok-free.dev/webhook/api/sms/ingest
 ```
 
 ## Local build

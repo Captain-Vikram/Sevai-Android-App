@@ -22,7 +22,7 @@ import java.util.Locale;
 public class SmsReceiver extends BroadcastReceiver {
 
     private static final String TAG = "SmsReceiver";
-    private static final String API_ENDPOINT = "https://debtless-creation-goal.ngrok-free.dev/api/sms/ingest";
+    private static final String API_ENDPOINT = "https://debtless-creation-goal.ngrok-free.dev/webhook/api/sms/ingest";
     // API key will be loaded from SharedPreferences
     private static String API_KEY = null;
     // Higher threshold for API forwarding (only high-confidence financial messages)
