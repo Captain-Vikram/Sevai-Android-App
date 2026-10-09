@@ -192,6 +192,7 @@ public class DetailActivity extends AppCompatActivity {
                 conn.setRequestMethod("POST");
                 conn.setRequestProperty("Content-Type", "application/json");
                 conn.setRequestProperty("User-Agent", "Sevai.app Android Client");
+                conn.setRequestProperty("ngrok-skip-browser-warning", "true");
                 // New API expects API key via header X-SMS-API-Key
                 conn.setRequestProperty("X-SMS-API-Key", apiKey);
                 conn.setDoOutput(true);

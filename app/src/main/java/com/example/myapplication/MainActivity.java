@@ -282,6 +282,7 @@ public class MainActivity extends AppCompatActivity {
                 conn.setRequestMethod("POST");
                 conn.setRequestProperty("Content-Type", "application/json");
                 conn.setRequestProperty("User-Agent", "Sevai.app Android Client");
+                conn.setRequestProperty("ngrok-skip-browser-warning", "true");
                 // Pass API key in header as X-SMS-API-Key per new API contract
                 conn.setRequestProperty("X-SMS-API-Key", apiKey);
                 conn.setDoOutput(true);
@@ -430,6 +431,7 @@ public class MainActivity extends AppCompatActivity {
                 conn.setRequestMethod("POST");
                 conn.setRequestProperty("Content-Type", "application/json");
                 conn.setRequestProperty("User-Agent", "Sevai.app Android Client");
+                conn.setRequestProperty("ngrok-skip-browser-warning", "true");
                 conn.setRequestProperty("X-SMS-API-Key", apiKey);
                 conn.setDoOutput(true);
 
