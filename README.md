@@ -32,7 +32,7 @@ https://debtless-creation-goal.ngrok-free.dev/api/sms/ingest
 The release APK is generated at:
 
 ```text
-app/build/outputs/apk/release/app-release-unsigned.apk
+app/build/outputs/apk/release/app-release.apk
 ```
 
 ## GitHub Actions
@@ -40,7 +40,7 @@ app/build/outputs/apk/release/app-release-unsigned.apk
 The workflow at `.github/workflows/android-release.yml`:
 
 - builds `assembleRelease` on pushes and pull requests
-- uploads the unsigned release APK as a workflow artifact
+- builds a signed release APK as a workflow artifact
 - creates a GitHub Release when a version tag such as `v1.0.0` is pushed
 
 Create a release locally after adding a GitHub remote:
@@ -51,7 +51,14 @@ git push origin main
 git push origin v1.0.0
 ```
 
-The generated APK is unsigned. Add Android signing secrets and a signing configuration before distributing it through Google Play or outside trusted testing.
+The workflow generates a temporary signing key if no signing secrets are configured. That APK is installable, but future updates will not be able to replace it because the temporary key is different each run. For stable upgrades, configure these GitHub Actions secrets:
+
+- `ANDROID_KEYSTORE_BASE64`
+- `ANDROID_KEYSTORE_PASSWORD`
+- `ANDROID_KEY_ALIAS`
+- `ANDROID_KEY_PASSWORD`
+
+The stable keystore must never be committed to Git.
 
 ## Webhook contract
 
